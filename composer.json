@@ -1,0 +1,46 @@
+{
+  "name": "elliotjreed/web-server-health-check",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Elliot J. Reed",
+      "email": "git-contact@elliotjreed.com",
+      "homepage": "https://www.elliotjreed.com",
+      "role": "Developer"
+    }
+  ],
+  "type": "project",
+  "description": "",
+  "autoload": {
+    "psr-4": {
+      "ElliotJReed\\HealthCheck\\": "src/ElliotJReed/HealthCheck/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ElliotJReed\\Tests\\HealthCheck\\": "tests/ElliotJReed/HealthCheck/"
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "guzzlehttp/guzzle": "^6.3",
+    "monolog/monolog": "^1.24",
+    "ext-simplexml": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "phpunit/phpunit": "^7",
+    "squizlabs/php_codesniffer": "^3",
+    "php-coveralls/php-coveralls": "^2"
+  },
+  "scripts": {
+    "test": [
+      "@phpunit",
+      "@phpcs"
+    ],
+    "phpunit": "vendor/bin/phpunit -c phpunit.xml",
+    "coverage": "vendor/bin/phpunit -c phpunit.xml --coverage-html ./coverage --coverage-text",
+    "phpcs": "vendor/bin/phpcs --standard=ruleset.xml"
+  }
+}
