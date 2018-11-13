@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/elliotjreed/web-server-health-check.svg?branch=master)](https://travis-ci.org/elliotjreed/web-server-health-check)
+[![Build Status](https://travis-ci.org/elliotjreed/web-server-health-check.svg?branch=master)](https://travis-ci.org/elliotjreed/web-server-health-check)[![Coverage Status](https://coveralls.io/repos/github/elliotjreed/web-server-health-check/badge.svg?branch=master)](https://coveralls.io/github/elliotjreed/web-server-health-check?branch=master)
 
 # Web Server Health Checker
 
