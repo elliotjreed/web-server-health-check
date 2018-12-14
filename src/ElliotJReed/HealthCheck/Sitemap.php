@@ -25,6 +25,7 @@ class Sitemap
     {
         $this->httpClient->request('GET', $url, [
             'http_errors' => false,
+            'verify' => false,
             'on_stats' => function (TransferStats $stats): void {
                 if ($stats->hasResponse()) {
                     $response = $stats->getResponse()->getBody();

@@ -31,6 +31,7 @@ class Url
     {
         $this->client->request('GET', $url, [
             'http_errors' => false,
+            'verify' => false,
             'on_stats' => function (TransferStats $stats): void {
                 $this->checkStatusCode($stats->getResponse()->getStatusCode(), (string) $stats->getEffectiveUri(), $stats->getTransferTime());
             }
