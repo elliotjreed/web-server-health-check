@@ -25,8 +25,9 @@
     "php": "^7.1",
     "guzzlehttp/guzzle": "^6.3",
     "monolog/monolog": "^1.24",
-    "ext-simplexml": "*",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-libxml": "*",
+    "ext-simplexml": "*"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
