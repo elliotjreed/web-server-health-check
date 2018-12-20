@@ -12,21 +12,12 @@ class Url
     private $client;
     private $logger;
 
-    /**
-     * Url constructor.
-     * @param LoggerInterface $logger
-     * @param ClientInterface $guzzle
-     */
     public function __construct(LoggerInterface $logger, ClientInterface $guzzle)
     {
         $this->client = $guzzle;
         $this->logger = $logger;
     }
 
-    /**
-     * @param string $url The URL to be checked
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
     public function check(string $url): void
     {
         $this->client->request('GET', $url, [
@@ -38,11 +29,6 @@ class Url
         ]);
     }
 
-    /**
-     * @param int $statusCode The HTTP status code
-     * @param string $url The URL
-     * @param float $transferTime The transfer time in seconds
-     */
     private function checkStatusCode(int $statusCode, string $url, float $transferTime): void
     {
         if ($statusCode >= 100 && $statusCode < 400) {
