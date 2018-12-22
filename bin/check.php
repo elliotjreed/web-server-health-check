@@ -16,7 +16,13 @@ if (!isset($argv[1])) {
     exit(1);
 }
 
+$logLevel = 300;
+if (isset($argv[2]) && \in_array($argv[2], ['--verbose', '-v', '-vv'])) {
+    $logLevel = 200;
+}
+
 $guzzle = new Client();
 $logger = new Logger('Urls');
-$logger->pushHandler(new StreamHandler(__DIR__ . '/../log.txt'));
+$logger->pushHandler(new StreamHandler('php://stdout', $logLevel));
+
 (new Sitemap($guzzle, new Xml(), new Url($logger, $guzzle)))->setUrl($argv[1]);

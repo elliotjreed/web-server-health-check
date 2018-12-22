@@ -49,8 +49,16 @@ composer run-script phpcs
 
 ## Usage
 
+To check for HTTP responses of 400 or greater (ie. there's something wrong), run:
+
 ```bash
 php bin/check.php https://www.example.net/sitemap.xml
+```
+
+To check all HTTP responses and report on their response times, run:
+
+```bash
+php bin/check.php https://www.example.net/sitemap.xml -v
 ```
 
 
