@@ -24,5 +24,5 @@ RUN { find /usr/local/lib -type f -print0 | xargs -0r strip --strip-all -p 2>/de
     find . -type f \( -iname "*license*" ! -iname "*.php" \) -exec rm -vf {} +
 
 VOLUME ["/app"]
-ENTRYPOINT ["php"]
-CMD ["/app/bin/check"]
+ENTRYPOINT ["/app/bin/check"]
+CMD ["--help"]

@@ -11,8 +11,8 @@ use Monolog\Logger;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-if (!isset($argv[1])) {
-    echo 'Please specify a sitemap URL' . PHP_EOL;
+if (!isset($argv[1] || $argv[1] === '--help')) {
+    echo 'Please specify an XML sitemap URL to scan, and additionally `-v` to include successful response codes.' . PHP_EOL;
     exit(1);
 }
 
