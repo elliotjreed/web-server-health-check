@@ -11,18 +11,24 @@ use Monolog\Logger;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-if (!isset($argv[1]) || $argv[1] === '--help') {
-    echo 'Please specify an XML sitemap URL to scan, and additionally `-v` to include successful response codes.' . PHP_EOL;
+$logLevel = 400;
+
+$argumentCount = \count($argv);
+for ($i = 1; $i < $argumentCount; $i++) {
+    if (\filter_var($argv[$i], FILTER_VALIDATE_URL) !== false) {
+        $url = $argv[$i];
+    } elseif (\in_array($argv[$i], ['--verbose', '-v', '-vv'])) {
+        $logLevel = 200;
+    } elseif ($argv[$i] === '--help' || $argv[$i] === '-h') {
+        exit('Usage: ./check.php http://example.com/sitemap.xml [--verbose]');
+    }
+}
+if (!isset($url)) {
+    echo 'Please specify an XML sitemap URL to scan.' . PHP_EOL . 'Usage: ./check.php http://example.com/sitemap.xml [--verbose]' . PHP_EOL;
     exit(1);
 }
 
-$logLevel = 300;
-if (isset($argv[2]) && \in_array($argv[2], ['--verbose', '-v', '-vv'])) {
-    $logLevel = 200;
-}
-
 $guzzle = new Client();
-$logger = new Logger('Urls');
-$logger->pushHandler(new StreamHandler('php://stdout', $logLevel));
+$logger = (new Logger('Urls'))->pushHandler(new StreamHandler('php://stdout', $logLevel));
 
 (new Sitemap($guzzle, new Xml(), new Url($logger, $guzzle)))->setUrl($argv[1]);
