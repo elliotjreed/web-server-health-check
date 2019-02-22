@@ -14,7 +14,7 @@ use Monolog\Handler\TestHandler;
 use Monolog\Logger;
 use PHPUnit\Framework\TestCase;
 
-class SitemapTest extends TestCase
+final class SitemapTest extends TestCase
 {
     public function testItReturnsArrayOfUrlsFromXml(): void
     {

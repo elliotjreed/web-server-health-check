@@ -6,7 +6,7 @@ namespace ElliotJReed\Tests\HealthCheck\Parsers;
 use ElliotJReed\HealthCheck\Parsers\Xml;
 use PHPUnit\Framework\TestCase;
 
-class XmlTest extends TestCase
+final class XmlTest extends TestCase
 {
     public function testItReturnsArrayOfUrlsFromXml(): void
     {

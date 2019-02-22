@@ -12,7 +12,7 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 
-class UrlTest extends TestCase
+final class UrlTest extends TestCase
 {
     public function testItLogsTwoHundredResponseAsInfoLevel(): void
     {
