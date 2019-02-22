@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace ElliotJReed\HealthCheck\Parsers;
 
-class Xml implements Parser
+final class Xml implements Parser
 {
     public function parse(string $sitemap): array
     {
