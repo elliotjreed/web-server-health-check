@@ -67,7 +67,7 @@ final class UrlTest extends TestCase
 
     public function testItLogsUnknownResponseAsCriticalLevel(): void
     {
-        $mock = new MockHandler([new Response(13, [])]);
+        $mock = new MockHandler([new Response(599, [])]);
 
         $client = new Client(['handler' => HandlerStack::create($mock)]);
 
@@ -79,6 +79,6 @@ final class UrlTest extends TestCase
         $logRecord = $testHandler->getRecords()[0];
 
         $this->assertTrue($testHandler->hasCritical('http://www.example.net/1'));
-        $this->assertSame(['httpStatusCode' => 13, 'transferTime' => 0.00], $logRecord['context']);
+        $this->assertSame(['httpStatusCode' => 599, 'transferTime' => 0.00], $logRecord['context']);
     }
 }
