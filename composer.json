@@ -10,7 +10,7 @@
     }
   ],
   "type": "project",
-  "description": "",
+  "description": "A PHP application to check the HTTP status codes and response times of every URL provided in a sitemap.xml URL. Potentially useful to run following a deployment or as an occasional check for any errors which may slip through any other logging.",
   "autoload": {
     "psr-4": {
       "ElliotJReed\\HealthCheck\\": "src/ElliotJReed/HealthCheck/"
