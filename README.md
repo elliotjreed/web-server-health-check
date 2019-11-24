@@ -11,6 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 This package requires:
+
   - PHP 7.1+
   - [Composer](https://getcomposer.org/)
 
@@ -58,6 +59,6 @@ php bin/check.php https://www.example.net/sitemap.xml -v
 
 ## Built With
 
-- [PHP](https://secure.php.net/)
-- [PHPUnit](https://phpunit.de/) - Unit Testing
-- [Composer](https://getcomposer.org/) - Dependency Management
+  - [PHP](https://secure.php.net/)
+  - [PHPUnit](https://phpunit.de/) - Unit Testing
+  - [Composer](https://getcomposer.org/) - Dependency Management
