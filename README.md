@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 This package requires:
 
-  - PHP 7.1+
+  - PHP 7.4+
   - [Composer](https://getcomposer.org/)
 
 ### Installing
@@ -55,6 +55,20 @@ To check all HTTP responses and report on their response times, run:
 
 ```bash
 php bin/check.php https://www.example.net/sitemap.xml -v
+```
+
+## Building Phar
+
+To build a self-contained `phar` file you will need `box` locally. To download `box` run:
+
+```bash
+curl -LSs https://box-project.github.io/box2/installer.php | php
+```
+
+To compile the project to `bin/healthcheck.phar` run:
+
+```bash
+php ./box.phar build
 ```
 
 ## Built With
