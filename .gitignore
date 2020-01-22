@@ -3,5 +3,6 @@ composer.phar
 /.idea/
 /coverage/
 /testdox/
-/bin/*.yml
 .phpunit.result.cache
+box.phar
+bin/healthcheck.phar
