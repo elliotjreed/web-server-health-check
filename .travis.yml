@@ -2,19 +2,7 @@ matrix:
   include:
     - language: php
       sudo: false
-      php: 7.3
-      cache:
-        directories:
-          - $HOME/.composer/cache/files
-      before_script:
-        - composer install
-      script:
-        - vendor/bin/phpunit -c phpunit.xml
-        - vendor/bin/phpcs -q -n --colors --standard=ruleset.xml
-
-    - language: php
-      sudo: false
-      php: 7.2
+      php: 7.4
       cache:
         directories:
           - $HOME/.composer/cache/files
@@ -22,5 +10,6 @@ matrix:
         - composer install
       script:
         - vendor/bin/phpunit -c phpunit.xml --coverage-clover ./build/logs/clover.xml
+        - vendor/bin/phpcs -q -n --colors --standard=ruleset.xml
       after_success:
         - travis_retry php vendor/bin/php-coveralls

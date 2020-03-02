@@ -10,8 +10,8 @@ use Psr\Log\LoggerInterface;
 
 class Url
 {
-    private $client;
-    private $logger;
+    private ClientInterface $client;
+    private LoggerInterface $logger;
 
     public function __construct(LoggerInterface $logger, ClientInterface $guzzle)
     {
