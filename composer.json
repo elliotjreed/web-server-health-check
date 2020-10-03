@@ -23,7 +23,7 @@
   },
   "require": {
     "php": "^7.4",
-    "guzzlehttp/guzzle": "^6.5",
+    "guzzlehttp/guzzle": "^7.1",
     "monolog/monolog": "^2.1",
     "ext-json": "*",
     "ext-libxml": "*",
