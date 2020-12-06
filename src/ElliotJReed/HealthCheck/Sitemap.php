@@ -11,15 +11,8 @@ use GuzzleHttp\TransferStats;
 
 class Sitemap
 {
-    private Xml $xmlParser;
-    private Url $urlChecker;
-    private ClientInterface $httpClient;
-
-    public function __construct(ClientInterface $httpClient, Xml $xmlParser, Url $urlChecker)
+    public function __construct(private ClientInterface $httpClient, private Xml $xmlParser, private Url $urlChecker)
     {
-        $this->xmlParser = $xmlParser;
-        $this->urlChecker = $urlChecker;
-        $this->httpClient = $httpClient;
     }
 
     public function setUrl(string $url): void

@@ -10,13 +10,8 @@ use Psr\Log\LoggerInterface;
 
 class Url
 {
-    private ClientInterface $client;
-    private LoggerInterface $logger;
-
-    public function __construct(LoggerInterface $logger, ClientInterface $guzzle)
+    public function __construct(private LoggerInterface $logger, private ClientInterface $client)
     {
-        $this->client = $guzzle;
-        $this->logger = $logger;
     }
 
     public function check(string $url): void

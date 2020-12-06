@@ -22,18 +22,15 @@
     }
   },
   "require": {
-    "php": "^7.4",
-    "guzzlehttp/guzzle": "^7.1",
-    "monolog/monolog": "^2.1",
-    "ext-json": "*",
-    "ext-libxml": "*",
-    "ext-simplexml": "*"
+    "php": "^8.0",
+    "guzzlehttp/guzzle": "^7.2",
+    "monolog/monolog": "^2.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
     "phpunit/phpunit": "^9.4",
     "squizlabs/php_codesniffer": "^3.5",
-    "php-coveralls/php-coveralls": "^2.3"
+    "php-coveralls/php-coveralls": "^2.4"
   },
   "scripts": {
     "test": [
