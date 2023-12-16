@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 This package requires:
 
-  - PHP 8.0+
+  - PHP 8.2+
   - [Composer](https://getcomposer.org/)
 
 ### Installing

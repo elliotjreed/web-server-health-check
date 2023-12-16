@@ -4,5 +4,6 @@ composer.phar
 /coverage/
 /testdox/
 .phpunit.result.cache
+.phpunit.cache
 box.phar
 bin/healthcheck.phar
